@@ -64,6 +64,9 @@ return [
                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
             ],
         ],
+        'storage'=>[
+            'class'=>'common\components\Storage'
+        ],
 
     ],
     'params' => $params,

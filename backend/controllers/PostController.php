@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use common\models\Category;
+use common\models\Images;
 use Yii;
 use common\models\Post;
 use common\models\SearchPost;
@@ -66,7 +67,7 @@ class PostController extends Controller
     public function actionCreate()
     {
         $model = new Post();
-        $model->setScenario('insert');
+       $image = new Images();
         $cats = Category::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -75,7 +76,8 @@ class PostController extends Controller
 
         return $this->render('create', [
             'model' => $model,
-            'cats'=>$cats
+            'cats'=>$cats,
+            'image'=>$image
         ]);
     }
 

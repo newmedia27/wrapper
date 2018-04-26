@@ -56,7 +56,7 @@ class Post extends \yii\db\ActiveRecord
                 'scenarios' => ['insert', 'update'],
                 'placeholder' => '@common/img/No-image-available.jpg',
                 'path' => '../../common/upload/post/{id}',
-                'url' => '@common/upload/post/{id}',
+                'url' => '../../common/upload/post/{id}',
                 'thumbs' => [
                     'thumb' => ['width' => 400, 'quality' => 90],
                     'preview' => ['width' => 200, 'height' => 200],

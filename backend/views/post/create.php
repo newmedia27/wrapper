@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 
 
+
 /* @var $this yii\web\View */
 /* @var $model common\models\Post */
 
@@ -16,7 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
-        'cats'=>$cats
+        'cats'=>$cats,
+        'image'=>$image
     ]) ?>
 
 </div>
